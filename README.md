@@ -50,13 +50,13 @@ npm install --save throw-http-errors
 ### 503 ServiceUnavailable
 
 ```javascript
-  errors.BadGateway(msg, code);
+  errors.ServiceUnavailable(msg, code);
 ```
 
 ### 504 GatewayTimeout
 
 ```javascript
-  errors.BadGateway(msg, code);
+  errors.GatewayTimeout(msg, code);
 ```
 
 
@@ -69,7 +69,7 @@ Parameters:
 
 ## Example
 
-In order to init it, you should use a config. The config should have a structure like this:
+In order to use it you need to require the module and then just throw a custom error:
 
 ```javascript
 const express = require('express');
