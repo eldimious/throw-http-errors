@@ -1,4 +1,4 @@
-const NotFoundError = require('./notFoundError');
+const NotFound = require('./notFound');
 const Unauthorized = require('./unauthorized');
 const Forbidden = require('./forbidden');
 const InternalServerError = require('./internalServerError');
@@ -7,7 +7,7 @@ const GatewayTimeout = require('./gatewayTimeout');
 const ServiceUnavailable = require('./serviceUnavailable');
 
 module.exports = {
-  NotFoundError,
+  NotFound,
   Unauthorized,
   Forbidden,
   InternalServerError,

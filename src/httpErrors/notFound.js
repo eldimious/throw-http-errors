@@ -1,4 +1,4 @@
-function NotFoundError(msg, code) {
+function NotFound(msg, code) {
   Error.captureStackTrace(this, this.constructor);
   this.name = this.constructor.name;
   this.status = 404;
@@ -6,7 +6,7 @@ function NotFoundError(msg, code) {
   this.message = msg || 'The resource was not found';
 }
 
-NotFoundError.prototype = Object.create(Error.prototype);
-NotFoundError.prototype.constructor = NotFoundError;
+NotFound.prototype = Object.create(Error.prototype);
+NotFound.prototype.constructor = NotFound;
 
-module.exports = NotFoundError;
+module.exports = NotFound;
