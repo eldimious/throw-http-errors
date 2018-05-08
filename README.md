@@ -16,11 +16,22 @@ npm install --save throw-http-errors
 ```javascript
   const errors = require('throw-http-errors');
 ```
+### 400 BadRequest
+
+```javascript
+  errors.BadRequest(msg, code);
+```
 
 ### 401 Unauthorized
 
 ```javascript
   errors.Unauthorized(msg, code);
+```
+
+### 402 PaymentRequired
+
+```javascript
+  errors.PaymentRequired(msg, code);
 ```
 
 ### 403 Forbidden
@@ -33,6 +44,12 @@ npm install --save throw-http-errors
 
 ```javascript
   errors.NotFound(msg, code);
+```
+
+### 405 MethodNotAllowed
+
+```javascript
+  errors.MethodNotAllowed(msg, code);
 ```
 
 ### 500 InternalServerError
