@@ -2,7 +2,7 @@ const httpErrorCodes = require('./httpErrorCodes');
 
 const httpErrors = {};
 
-httpErrorCodes.forEach((error) => {
+const createHttpError = function createHttpError(error) {
   function HttpError(message, code) {
     Error.call(this);
     Error.captureStackTrace(this, this.constructor);
@@ -14,7 +14,15 @@ httpErrorCodes.forEach((error) => {
 
   HttpError.prototype = Object.create(Error.prototype);
   HttpError.prototype.constructor = HttpError;
-  httpErrors[error.name] = HttpError;
+
+  return {
+    [error.name]: HttpError,
+  };
+};
+
+
+httpErrorCodes.forEach((error) => {
+  Object.assign(httpErrors, createHttpError(error));
 });
 
 module.exports = httpErrors;
