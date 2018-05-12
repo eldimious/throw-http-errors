@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "./node_modules/.bin/babel -d lib src/",
+    "precommit": "./node_modules/.bin/babel -d lib src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
