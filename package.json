@@ -4,8 +4,7 @@
   "description": "Custom errors for HTTP status codes.",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "./node_modules/.bin/babel -d src src/",
-    "precommit": "./node_modules/.bin/babel -d lib src/",
+    "prepublish": "./node_modules/.bin/babel -d lib lib/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
