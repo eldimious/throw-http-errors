@@ -163,7 +163,7 @@ const httpErrors = [
   },
   {
     name: 'RequestHeaderFieldsTooLarge',
-    status: 431,
+    status: 451,
     code: 'REQUEST_HEADER_FIELDS_TOO_LARGE',
     message: 'Request Header Fields Too Large',
   },
@@ -172,6 +172,12 @@ const httpErrors = [
     status: 500,
     code: 'INTERNAL_SERVER_ERROR',
     message: 'Internal Server Error',
+  },
+  {
+    name: 'NotImplemented',
+    status: 501,
+    code: 'NOT_IMPLEMENTED',
+    message: 'Not Implemented',
   },
   {
     name: 'BadGateway',
@@ -190,6 +196,42 @@ const httpErrors = [
     status: 504,
     code: 'GATEWAY_TIMEOUT',
     message: 'Gateway Timeout',
+  },
+  {
+    name: 'HTTPVersionNotSupported',
+    status: 505,
+    code: 'HTTP_VERSION_NOT_SUPPORTED',
+    message: 'HTTP Version Not Supported',
+  },
+  {
+    name: 'VariantAlsoNegotiates',
+    status: 506,
+    code: 'VARIANT_ALSO_NEGOTIATES',
+    message: 'Variant Also Negotiates',
+  },
+  {
+    name: 'InsufficientStorage',
+    status: 507,
+    code: 'INSUFFICIENT_STORAGE',
+    message: 'Insufficient Storage',
+  },
+  {
+    name: 'LoopDetected',
+    status: 508,
+    code: 'LOOP_DETECTED',
+    message: 'Loop Detected',
+  },
+  {
+    name: 'NotExtended',
+    status: 510,
+    code: 'NOT_EXTENDED',
+    message: 'Not Extended',
+  },
+  {
+    name: 'NetworkAuthenticationRequired',
+    status: 511,
+    code: 'NETWORK_AUTHENTICATION_REQUIRED',
+    message: 'Network Authentication Required',
   },
 ];
 
