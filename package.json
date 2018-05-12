@@ -1,10 +1,9 @@
 {
   "name": "throw-http-errors",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Custom errors for HTTP status codes.",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "./node_modules/.bin/babel -d lib src/",
     "tests": "mocha tests --recursive"
   },
   "repository": {

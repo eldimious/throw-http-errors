@@ -19,7 +19,7 @@ node_modules
 # dotenv environment variables file
 .env
 
-lib
+src
 index.js
 
 # eslint files

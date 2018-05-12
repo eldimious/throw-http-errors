@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 const sinon = require('sinon');
-const errors = require('../src');
+const errors = require('../lib');
 
 const getDataFromDB = function getDataFromDB() {
   throw new errors.NotFound();
