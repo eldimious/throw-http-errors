@@ -16,12 +16,11 @@ const createHttpError = function createHttpError(error) {
   HttpError.prototype.constructor = HttpError;
 
   return {
-    [error.name]: HttpError,
+    [error.name]: HttpError
   };
 };
 
-
-httpErrorCodes.forEach((error) => {
+httpErrorCodes.forEach(error => {
   Object.assign(httpErrors, createHttpError(error));
 });
 
