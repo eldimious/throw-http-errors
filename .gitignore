@@ -19,6 +19,8 @@ node_modules
 # dotenv environment variables file
 .env
 
+lib
+index.js
 # eslint files
 .eslintignore
 .eslintrc.js
