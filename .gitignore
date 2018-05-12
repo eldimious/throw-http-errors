@@ -21,3 +21,7 @@ node_modules
 
 lib
 index.js
+
+# eslint files
+.eslintignore
+.eslintrc.js
