@@ -1,6 +1,6 @@
 {
   "name": "throw-http-errors",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Custom errors for HTTP status codes.",
   "main": "lib/index.js",
   "scripts": {
