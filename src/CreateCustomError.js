@@ -7,4 +7,7 @@ function CreateCustomError(name, message, code, status) {
   this.code = code || 'CUSTOM_ERROR';
 }
 
+CreateCustomError.prototype = Object.create(Error.prototype);
+CreateCustomError.prototype.constructor = CreateCustomError;
+
 module.exports = CreateCustomError;
