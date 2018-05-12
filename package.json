@@ -4,6 +4,7 @@
   "description": "Custom errors for HTTP status codes.",
   "main": "lib/index.js",
   "scripts": {
+    "prepublish": "./node_modules/.bin/babel -d lib src/",
     "tests": "mocha tests --recursive"
   },
   "repository": {
