@@ -3,6 +3,9 @@
 > Custom errors for HTTP status codes.
 
 
+[![Build Status](https://travis-ci.org/eldimious/throw-http-errors.svg?branch=master)](https://travis-ci.org/eldimious/throw-http-errors)
+
+
 ## Usage
 
 First, install `throw-http-errors` as a dependency:
