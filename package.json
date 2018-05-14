@@ -5,8 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "./node_modules/.bin/babel -d lib src/",
-    "test": "node_modules/.bin/mocha --reporter spec",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/{**/,/}*.js -- -R spec",
+    "precoveralls": "istanbul cover node_modules/mocha/bin/_mocha test/{**/,/}*.js --report lcovonly -- -R spec && npm i coveralls@2",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.3.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.5.3",
+    "mocha": "^5.1.1",
     "sinon": "^4.0.0",
     "supertest": "^3.0.0"
   }
