@@ -3,7 +3,7 @@
 > Custom errors for HTTP status codes.
 
 
-[![Build Status](https://travis-ci.org/eldimious/throw-http-errors.svg?branch=master)](https://travis-ci.org/eldimious/throw-http-errors) [![Coverage Status](https://coveralls.io/repos/github/eldimious/throw-http-errors/badge.svg)](https://coveralls.io/github/eldimious/throw-http-errors)
+[![Build Status](https://travis-ci.org/eldimious/throw-http-errors.svg?branch=master)](https://travis-ci.org/eldimious/throw-http-errors) [![Coverage Status](https://coveralls.io/repos/github/eldimious/throw-http-errors/badge.svg?branch=master)](https://coveralls.io/github/eldimious/throw-http-errors?branch=master)
 
 ## Usage
 
