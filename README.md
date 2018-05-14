@@ -84,7 +84,7 @@ Parameters:
 - code[optional]: Code for this error
 
 
-##Supported HTTP ERRORS
+## Supported HTTP ERRORS
 
 | HTTPError Name                  | HTTP Status |
 |---------------------------------|-------------|

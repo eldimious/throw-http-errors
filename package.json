@@ -23,9 +23,6 @@
     "url": "https://github.com/eldimious/throw-error/issues"
   },
   "homepage": "https://github.com/eldimious/throw-error#readme",
-  "dependencies": {
-    "dotenv": "^5.0.1"
-  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
