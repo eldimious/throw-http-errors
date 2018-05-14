@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "./node_modules/.bin/babel -d lib src/",
-    "tests": "mocha tests --recursive",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec tests/*"
+    "test": "node_modules/.bin/mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
