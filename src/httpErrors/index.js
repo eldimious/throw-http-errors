@@ -17,7 +17,7 @@ const createHttpError = function createHttpError(error) {
 
   return {
     [error.name]: HttpError,
-    [error.code]: HttpError,
+    [error.status]: HttpError,
   };
 };
 
