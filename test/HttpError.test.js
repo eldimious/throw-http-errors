@@ -11,11 +11,11 @@ const getUserFromDB = function getUserFromDB() {
 };
 
 const throwCustomErrorWithCustomMsg = function throwCustomErrorWithCustomMsg() {
-  throw new errors.CreateCustomError('Custom Error', 'Custom msg', 'CUSTOM_CODE', 512);
+  throw new errors.CreateCustomError(512, 'Custom Error', 'Custom msg', 'CUSTOM_CODE');
 };
 
 const throwCustomError = function throwCustomError() {
-  throw new errors.CreateCustomError();
+  throw new errors.CreateCustomError(400);
 };
 
 describe('test HttpError:', function() {
@@ -69,7 +69,7 @@ describe('test HttpError:', function() {
 
   it('should throw a custom error with custom message', function (done) {
     try {
-      throwCustomError(400);
+      throwCustomError();
     }
     catch(error) {
       expect(error).to.be.an.instanceof(errors.CreateCustomError);
