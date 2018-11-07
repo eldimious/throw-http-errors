@@ -69,7 +69,7 @@ describe('test HttpError:', function() {
 
   it('should throw a custom error with custom message', function (done) {
     try {
-      throwCustomError();
+      throwCustomError(400);
     }
     catch(error) {
       expect(error).to.be.an.instanceof(errors.CreateCustomError);
