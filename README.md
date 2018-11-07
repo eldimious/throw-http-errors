@@ -22,60 +22,56 @@ npm install --save throw-http-errors
 
 ```javascript
   new errors.BadRequest(msg, code);
+            OR
+  new errors[400](msg, code);
 ```
 
 ### 401 Unauthorized
 
 ```javascript
   new errors.Unauthorized(msg, code);
+            OR
+  new errors[401](msg, code);
 ```
 
 ### 402 PaymentRequired
 
 ```javascript
   new errors.PaymentRequired(msg, code);
+            OR
+  new errors[402](msg, code);
 ```
 
 ### 403 Forbidden
 
 ```javascript
   new errors.Forbidden(msg, code);
+            OR
+  new errors[403](msg, code);
 ```
 
 ### 404 NotFound
 
 ```javascript
   new errors.NotFound(msg, code);
+            OR
+  new errors[404](msg, code);
 ```
 
 ### 405 MethodNotAllowed
 
 ```javascript
   new errors.MethodNotAllowed(msg, code);
+            OR
+  new errors[405](msg, code);
 ```
 
 ### 500 InternalServerError
 
 ```javascript
   new errors.InternalServerError(msg, code);
-```
-
-### 502 BadGateway
-
-```javascript
-  new errors.BadGateway(msg, code);
-```
-
-### 503 ServiceUnavailable
-
-```javascript
-  new errors.ServiceUnavailable(msg, code);
-```
-
-### 504 GatewayTimeout
-
-```javascript
-  new errors.GatewayTimeout(msg, code);
+            OR
+  new errors[500](msg, code);
 ```
 
 
@@ -134,18 +130,18 @@ Parameters:
 ## Custom Errors
 
 ```javascript
-  new errors.CreateCustomError(name, message, code, status);
+  new errors.CreateCustomError(status, name, message, code);
 ```
 
 Parameters:
+
+- status[required]: The HTTP Status number of this error.
 
 - name[optional]: A unique identifier of this error.
 
 - message[optional]: Message of this error.
 
 - code[optional]: A unique code of this error.
-
-- status[optional]: The HTTP Status number of this error.
 
 
 ## Example
