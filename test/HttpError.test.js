@@ -82,4 +82,16 @@ describe('test HttpError:', function() {
       return done();
     }
   });
+
+  it('should throw a TypeError as we do not provide a status', function (done) {
+    try {
+      throw new errors.CreateCustomError();
+    }
+    catch(error) {
+      expect(error).to.be.an.instanceof(TypeError);
+      expect(error).to.be.an.instanceof(Error);
+      expect(error.message).to.be.equal('status is not of valid type');
+      return done();
+    }
+  });
 });
