@@ -11,11 +11,11 @@ const getUserFromDB = function getUserFromDB() {
 };
 
 const throwCustomErrorWithCustomMsg = function throwCustomErrorWithCustomMsg() {
-  throw new errors.CreateCustomError('Custom Error', 'Custom msg', 'CUSTOM_CODE', 512);
+  throw new errors.CreateCustomError(512, 'Custom Error', 'Custom msg', 'CUSTOM_CODE');
 };
 
 const throwCustomError = function throwCustomError() {
-  throw new errors.CreateCustomError();
+  throw new errors.CreateCustomError(400);
 };
 
 describe('test HttpError:', function() {
@@ -79,6 +79,18 @@ describe('test HttpError:', function() {
       expect(error.status).to.be.equal(400);
       expect(error.code).to.be.equal('CUSTOM_ERROR');
       expect(error).to.be.an.instanceof(Error);
+      return done();
+    }
+  });
+
+  it('should throw a TypeError as we do not provide a status', function (done) {
+    try {
+      throw new errors.CreateCustomError();
+    }
+    catch(error) {
+      expect(error).to.be.an.instanceof(TypeError);
+      expect(error).to.be.an.instanceof(Error);
+      expect(error.message).to.be.equal('status is not of valid type');
       return done();
     }
   });
