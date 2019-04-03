@@ -18,10 +18,16 @@ npm install --save throw-http-errors
 ```javascript
   const errors = require('throw-http-errors');
 ```
+Parameters:
+
+- message[**optional**]: A detailed message for this error.
+
+- code[**optional**]: Code for this error, like FB API's error codes: https://developers.facebook.com/docs/marketing-api/error-reference/
+
 ### 400 BadRequest
 
 ```javascript
-  new errors.BadRequest(msg, code);
+  new errors.BadRequest('Name required in body', 190);
             OR
   new errors[400](msg, code);
 ```
@@ -73,13 +79,6 @@ npm install --save throw-http-errors
             OR
   new errors[500](msg, code);
 ```
-
-
-Parameters:
-
-- message[optional]: A detailed message for this error.
-
-- code[optional]: Code for this error
 
 
 ## Supported HTTP ERRORS
