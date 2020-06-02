@@ -18,12 +18,13 @@ const throwCustomError = function throwCustomError() {
   throw new errors.CreateCustomError(400);
 };
 
-describe('test HttpError:', function() {
-  it('should throw a default http error', function (done) {
+// eslint-disable-next-line no-undef
+describe('test HttpError:', () => {
+  // eslint-disable-next-line no-undef
+  it('should throw a default http error', (done) => {
     try {
       getDataFromDB();
-    }
-    catch(error) {
+    } catch (error) {
       expect(error).to.be.an.instanceof(errors.NotFound);
       expect(error).to.be.an.instanceof(Error);
       expect(error.name).to.be.equal('NotFound');
@@ -34,12 +35,11 @@ describe('test HttpError:', function() {
       return done();
     }
   });
-
-  it('should throw a http error with custom msg', function (done) {
+  // eslint-disable-next-line no-undef
+  it('should throw a http error with custom msg', (done) => {
     try {
       getUserFromDB();
-    }
-    catch(error) {
+    } catch (error) {
       expect(error).to.be.an.instanceof(errors.NotFound);
       expect(error).to.be.an.instanceof(Error);
       expect(error.name).to.be.equal('NotFound');
@@ -50,12 +50,11 @@ describe('test HttpError:', function() {
       return done();
     }
   });
-
-  it('should throw a custom error', function (done) {
+  // eslint-disable-next-line no-undef
+  it('should throw a custom error', (done) => {
     try {
       throwCustomErrorWithCustomMsg();
-    }
-    catch(error) {
+    } catch (error) {
       expect(error).to.be.an.instanceof(errors.CreateCustomError);
       expect(error.name).to.be.equal('Custom Error');
       expect(error.message).to.be.a('string');
@@ -66,12 +65,11 @@ describe('test HttpError:', function() {
       return done();
     }
   });
-
-  it('should throw a custom error with custom message', function (done) {
+  // eslint-disable-next-line no-undef
+  it('should throw a custom error with custom message', (done) => {
     try {
       throwCustomError();
-    }
-    catch(error) {
+    } catch (error) {
       expect(error).to.be.an.instanceof(errors.CreateCustomError);
       expect(error.name).to.be.equal('CustomError');
       expect(error.message).to.be.a('string');
@@ -82,12 +80,11 @@ describe('test HttpError:', function() {
       return done();
     }
   });
-
-  it('should throw a TypeError as we do not provide a status', function (done) {
+  // eslint-disable-next-line no-undef
+  it('should throw a TypeError as we do not provide a status', (done) => {
     try {
       throw new errors.CreateCustomError();
-    }
-    catch(error) {
+    } catch (error) {
       expect(error).to.be.an.instanceof(TypeError);
       expect(error).to.be.an.instanceof(Error);
       expect(error.message).to.be.equal('status is not of valid type');

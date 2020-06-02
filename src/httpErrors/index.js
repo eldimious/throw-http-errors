@@ -3,21 +3,21 @@ const httpErrorCodes = require('./httpErrorCodes');
 const httpErrors = {};
 
 const createHttpError = function createHttpError(error) {
-  function HttpError(message, code) {
-    Error.call(this);
-    Error.captureStackTrace(this, this.constructor);
-    this.name = error.name;
-    this.status = error.status;
-    this.code = code || error.code;
-    this.message = message || error.message;
+  class CustomHttpError extends Error {
+    constructor(message, code) {
+      super(message);
+      if (Error.captureStackTrace) {
+        Error.captureStackTrace(this, this.constructor);
+      }
+      this.name = error.name;
+      this.status = error.status;
+      this.code = code || error.code;
+      this.message = message || error.message;
+    }
   }
-
-  HttpError.prototype = Object.create(Error.prototype);
-  HttpError.prototype.constructor = HttpError;
-
   return {
-    [error.name]: HttpError,
-    [error.status]: HttpError,
+    [error.name]: CustomHttpError,
+    [error.status]: CustomHttpError,
   };
 };
 
