@@ -2,7 +2,7 @@ const httpErrorCodes = require('./httpErrorCodes');
 
 const httpErrors = {};
 
-const createHttpError = function createHttpError(error) {
+function createHttpError(error) {
   class CustomHttpError extends Error {
     constructor(message, code) {
       super(message);
@@ -19,7 +19,7 @@ const createHttpError = function createHttpError(error) {
     [error.name]: CustomHttpError,
     [error.status]: CustomHttpError,
   };
-};
+}
 
 httpErrorCodes.forEach((error) => {
   Object.assign(httpErrors, createHttpError(error));
