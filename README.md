@@ -1,6 +1,6 @@
 # throw-http-errors
 
-> Custom errors for HTTP status codes.
+> Custom errors for HTTP status codes. For the old js version look at the branch [javascript](https://github.com/eldimious/throw-http-errors/tree/javascript)
 
 
 [![Build Status](https://travis-ci.org/eldimious/throw-http-errors.svg?branch=master)](https://travis-ci.org/eldimious/throw-http-errors) [![Coverage Status](https://coveralls.io/repos/github/eldimious/throw-http-errors/badge.svg?branch=master)](https://coveralls.io/github/eldimious/throw-http-errors?branch=master)
