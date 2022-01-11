@@ -1,4 +1,7 @@
-const httpErrors = [{
+/* eslint-disable import/prefer-default-export */
+import { IHttpErrorCode } from './HttpErrorCodeInterface';
+
+export const httpErrorCodes: IHttpErrorCode[] = [{
   name: 'BadRequest',
   status: 400,
   code: 'BAD_REQUEST',
@@ -194,5 +197,3 @@ const httpErrors = [{
   code: 'NETWORK_AUTHENTICATION_REQUIRED',
   message: 'Network Authentication Required',
 }];
-
-module.exports = httpErrors;
