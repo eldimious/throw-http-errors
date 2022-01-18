@@ -2,10 +2,11 @@
   "name": "throw-http-errors",
   "version": "3.2.0",
   "description": "Custom errors for HTTP status codes.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublish": "cp -R src lib/",
+    "prepublish": "tsc",
     "coverage": "istanbul cover node_modules/ts-mocha/bin/ts-mocha tests/{**/,/}*.ts -- -R spec",
     "precoveralls": "istanbul cover node_modules/ts-mocha/bin/ts-mocha tests/{**/,/}*.ts --report lcovonly -- -R spec && npm i coveralls@2",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.ts",
