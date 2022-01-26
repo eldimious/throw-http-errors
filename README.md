@@ -156,3 +156,11 @@ app.get('/user/:id', (req, res, next) => {
   next(new errors.NotFound('User not found', 'USER_NOT_FOUND'));
 });
 ```
+
+## Support Me
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/eldimious)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
